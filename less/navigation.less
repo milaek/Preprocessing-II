@@ -1,1 +1,19 @@
 // Navigation Styles here
+#firehellfire {
+    border-bottom: 2px dashed @navigation-border;
+    .paddingvertical(2%);
+    #navbar {
+        .flexbox(space-between, center);
+        max-width: 800px;
+        width: 100%;
+        margin: 0 auto;
+        nav {
+            .flexbox(space-around, flex-end);
+            width: 50%;
+            a {
+                text-decoration: none;
+                color: @font-color;
+            }
+        }
+    }
+}
