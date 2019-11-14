@@ -2,14 +2,29 @@
 #firehellfire {
     border-bottom: 2px dashed @navigation-border;
     .paddingvertical(2%);
+    @media @mobile {
+        .paddingvertical(0.5%);
+    }
     #navbar {
         .flexbox(space-between, center);
         max-width: 800px;
         width: 100%;
         margin: 0 auto;
+        @media @mobile {
+            flex-direction: column;
+            max-width: 400px;
+            h1 {
+                margin-bottom: 2%;
+                margin-top: 2%;
+            }
+        }
         nav {
             .flexbox(space-around, flex-end);
             width: 50%;
+            @media @mobile {
+                width: 100%;
+
+            }
             a {
                 text-decoration: none;
                 color: @font-color;
