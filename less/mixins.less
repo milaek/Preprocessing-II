@@ -1,1 +1,36 @@
 // Mixins in here
+.flexbox (@justify, @align) {
+    display: flex;
+    justify-content: @justify;
+    align-items: @align;
+}
+.paddinghorizontal (@paddingLR) {
+    padding-left: @paddingLR;
+    padding-right: @paddingLR;
+}
+.paddingvertical (@paddingTB) {
+    padding-top: @paddingTB;
+    padding-bottom: @paddingTB;
+}
+.marginhorizontal (@marginLR) {
+    margin-left: @marginLR;
+    margin-right: @marginLR;
+}
+.marginvertical (@marginTB) {
+    margin-top: @marginTB;
+    margin-bottom: @marginTB;
+}
+.btn {
+    width: 75%;
+    text-align: center;
+    .paddingvertical(4%);
+    font-size: 1.7rem;
+    background: darken(@button-bg, 8%);
+    color: @white;
+    border-radius: 9px;
+    @media @mobile {
+        width: 100%;
+        background: @button-bg;
+    }
+
+}
